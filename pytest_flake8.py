@@ -97,7 +97,7 @@ class Flake8Item(pytest.Item, pytest.File):
     def __init__(self, fspath, parent, flake8ignore=None, maxlength=None,
                  maxcomplexity=None, showshource=None, statistics=None):
         super(Flake8Item, self).__init__(fspath, parent)
-        self._nodeid += "::FLAKE8"
+        self._nodeid += "-FLAKE8"
         self.add_marker("flake8")
         self.flake8ignore = flake8ignore
         self.maxlength = maxlength
